@@ -7,14 +7,21 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-function consume(param1, param2, cb) {
-    
+function consume(param1, param2, add) {
+  console.log(add(param1, param2));
+
+}
+add = function() {
+  return 2 + 2;
 }
 
-add(param1, param2) {
-  return param1 + param2;
+multiply = function() {
+  return 10 * 16;
 }
 
+greeting = function() {
+  return "Hello, " + "Mary" + " " + "Poppins" + ", nice to meet you!";
+}
 
 /* const add = (param1, param2) => {
   return param1 + param2;
@@ -35,8 +42,8 @@ const greeting = (param1, param2) => {
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume(10,16,multiply); // 160
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -45,6 +52,7 @@ consume(2,2,add); // 4
 
 // Explanation: 
 
+// Because 'nestedFunction' is literally nested within the 'myFunction' object, it is within the same scope. It therefore can access all properties within 'myFunction', such as the constant variable 'internal'.
 
 const external = "I'm outside the function";
 
