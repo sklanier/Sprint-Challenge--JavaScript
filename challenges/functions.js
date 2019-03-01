@@ -7,13 +7,14 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-function consume(param1, param2, callback) {
-  return callback(param1, param2);  
+function consume(param1, param2, cb) {
+    
 }
 
-function add(param1, param2) {
+add(param1, param2) {
   return param1 + param2;
 }
+
 
 /* const add = (param1, param2) => {
   return param1 + param2;
